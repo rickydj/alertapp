@@ -4,11 +4,7 @@ import { NavController } from 'ionic-angular';
 import {
   GoogleMaps,
   GoogleMap,
-  GoogleMapsEvent,
   GoogleMapOptions,
-  CameraPosition,
-  MarkerOptions,
-  Marker
 } from '@ionic-native/google-maps';
 
 @Component({
@@ -39,17 +35,7 @@ export class HomePage {
       }
     };
 
-    this.map = GoogleMaps.create('map-canvas', mapOptions);
-
-    let marker: Marker = this.map.addMarkerSync({
-      title: 'Alertapp',
-      icon: 'blue',
-      animation: 'DROP',
-      position: {
-        lat: 43.0741904,
-        lng: -89.3809802
-      }
-    });
+    this.map = GoogleMaps.create('map_canvas', mapOptions);
 
 /*     marker.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
       alert('clicked');
